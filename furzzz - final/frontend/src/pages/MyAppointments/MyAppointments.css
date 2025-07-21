@@ -1,0 +1,61 @@
+.my-appointments {
+    margin: 50px 0px;
+}
+
+.my-appointments .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.my-appointments-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #454545;
+    border: 1px solid tomato;
+}
+
+.my-appointments-item p span {
+    color: tomato;
+}
+
+.my-appointments-item p b {
+    font-weight: 500;
+    color: #454545;
+}
+
+/* Updated Track Appointment Button */
+.my-appointments-item button {
+    background: none;
+    color: tomato;
+    font-weight: bold;
+    border: 2px solid tomato;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.my-appointments-item button:hover {
+    background: tomato;
+    color: white !important;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .my-appointments-item {
+        grid-template-columns: 1fr 2fr 1fr;
+        row-gap: 5px;
+        font-size: 12px;
+    }
+    
+    .my-appointments-item button {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+}

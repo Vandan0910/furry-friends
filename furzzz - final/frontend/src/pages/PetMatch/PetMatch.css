@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.petmatch-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.petmatch-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* 🏷️ Upload Section */
+.upload-section {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content */
+}
+
+/* 🏷️ File Upload Button */
+.upload-section input[type="file"] {
+  display: none; /* Hide default file input */
+}
+
+.upload-label {
+  display: inline-block;
+  background: none;
+  color: tomato;
+  font-weight: bold;
+  border: 2px solid tomato;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.upload-label:hover {
+  background: tomato;
+  color: white !important;
+}
+
+/* 🏷️ Detect Breed Button */
+.upload-button {
+  background: none;
+  color: tomato;
+  font-weight: bold;
+  border: 2px solid tomato;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.upload-button:hover {
+  background: tomato;
+  color: white !important;
+}
+
+/* 🏷️ Image Preview - Centered */
+.image-preview {
+  width: 150px;  /* Adjust as needed */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 15px auto; /* Centers the image */
+  display: block;
+  border: 3px solid tomato;
+}
+
+/* 🏷️ Detected Breed */
+.breed-result {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #222;
+}
+
+/* 🏷️ Products Section */
+.products-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.products-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* 🏷️ Product List - Items Side by Side */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Ensure images align properly */
+  gap: 20px; /* Space between cards */
+}
+
+/* 🏷️ Product Card */
+.product-card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;  /* Increase size */
+  height: auto;  /* Allow height to expand */
+  text-align: center;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* 🏷️ Product Image */
+
+.product-image {
+  width: 100%; /* Make it responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 200px; /* Prevent excessive shrinking */
+  object-fit: contain; /* Ensure full image is visible */
+  }
+
+
+/* 🏷️ Product Name */
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 🏷️ Product Price */
+.product-price {
+  font-size: 16px;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* 🏷️ Fade In Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* 🏷️ Responsive Design */
+@media (max-width: 1050px) {
+  .petmatch-container {
+    width: 90%;
+  }
+
+  .product-list {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: center;
+  }
+}

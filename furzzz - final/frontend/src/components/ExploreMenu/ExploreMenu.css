@@ -1,0 +1,76 @@
+.explore-menu-list {
+    display: flex;
+    justify-content: center; /* Centers items if fewer */
+    align-items: stretch; /* Ensures equal height */
+    gap: 40px; /* Increased space between cards */
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: auto;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+
+.explore-menu-text {
+    max-width: 100%;
+    color: black;
+    font-size: 16px;
+    margin-bottom: 25px; /* Added more space */
+}
+
+/* Hide scrollbar */
+.explore-menu-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Make all cards uniform in size */
+.explore-menu-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; /* Fixed width */
+    min-height: 300px; /* Increased height for better fit */
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-shrink: 0; /* Prevents shrinking in scroll */
+    transition: transform 0.2s;
+}
+
+.explore-menu-list-item:hover {
+    transform: scale(1.05);
+}
+
+/* Image consistency */
+.explore-menu-list-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Title */
+.explore-menu-list-item h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Description text - keeps it within the card */
+.explore-menu-list-item p {
+    font-size: 13px;
+    color: #747474;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 10px;
+    min-height: 50px; /* Ensures consistent spacing */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    max-width: 90%;
+}
+
+/* Button remains at the bottom */
+
